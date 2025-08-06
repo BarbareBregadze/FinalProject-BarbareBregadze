@@ -1,0 +1,74 @@
+.image-link img {
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+}
+
+.classname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(237, 237, 255);
+}
+
+.navigation {
+  display: flex;
+  gap: 35px;
+  margin-right: 80px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  /* amas shevcvli */
+}
+
+/* გასტილვააა */
+
+.main-info {
+  background-color: #8c62a1;
+  padding: 20px 50px 40px;
+  margin-top: 70px;
+  text-align: center;
+  color: white; /* so text is visible on brown background */
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+.navigation a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navigation a:hover {
+  transform: scale(1.1);
+}
+
+/* teqstis gastilvaa */
+.main-info .pirv {
+  font-size: 80px;
+  font-family: "Modak", system-ui;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.main-info .meore {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.main-info .mesame {
+  font-size: 18px;
+}
+
+.bolo {
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  color: rgb(91, 91, 91);
+}

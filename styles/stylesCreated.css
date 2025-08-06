@@ -1,0 +1,68 @@
+.image-link img {
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+}
+
+.classname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(237, 237, 255);
+}
+
+.navigation {
+  display: flex;
+  gap: 35px;
+  margin-right: 80px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  /* amas shevcvli */
+}
+
+.navigation a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navigation a:hover {
+  transform: scale(1.1); /* Makes it grow slightly on hover */
+}
+
+h1 {
+  margin-left: 50px;
+  margin-top: 60px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.pirveli {
+  margin-top: 50px;
+}
+
+.bigbox {
+  display: flex;
+  flex-direction: row;
+  border: solid #8c62a1 2px;
+  margin-top: 60px;
+}
+
+.classbox {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.classbox img {
+  width: 650px;
+  border: solid #8c62a1 2px;
+  display: block;
+}
