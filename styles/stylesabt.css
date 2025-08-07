@@ -21,7 +21,6 @@ a {
   text-decoration: none;
   font-size: 20px;
   color: black;
-  /* amas shevcvli */
 }
 
 .navigation a {
@@ -29,7 +28,7 @@ a {
 }
 
 .navigation a:hover {
-  transform: scale(1.1); /* Makes it grow slightly on hover */
+  transform: scale(1.1);
 }
 
 .box {
@@ -53,7 +52,7 @@ p {
 
 .bigbox {
   display: flex;
-  align-items: flex-start; /* aligns top of text and image */
+  align-items: flex-start;
   justify-content: space-between;
   align-items: center;
 }
@@ -68,4 +67,80 @@ p {
   display: block;
   margin-right: 200px;
   margin-top: 50px;
+}
+
+/* Hide burger menu by default */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Hide checkbox */
+#burger-toggle {
+  display: none;
+}
+
+/* Responsive navigation for max-width 770px */
+@media (max-width: 770px) {
+  .classname {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+
+  /* Show nav when burger toggled */
+  #burger-toggle:checked ~ .navigation {
+    display: flex;
+  }
+
+  .navigation a {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+/* Default layout */
+.bigbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* At less than 1215px, stack vertically */
+@media (max-width: 1215px) {
+  .bigbox {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .box {
+    margin-left: 0;
+    max-width: 90%;
+  }
+
+  .name img {
+    margin: 0 auto 50px auto;
+    width: 30%;
+    height: auto;
+  }
 }

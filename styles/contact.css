@@ -43,10 +43,90 @@ a {
 }
 
 .navigation a:hover {
-  transform: scale(1.1); /* Makes it grow slightly on hover */
+  transform: scale(1.1);
 }
 
 .nm {
   margin-top: 50px;
   color: rgb(96, 96, 96);
+}
+
+/* Responsive Burger Menu for Contact Page */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+/* Show burger menu and make nav vertical on small screens */
+@media (max-width: 770px) {
+  .classname {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #burger-toggle:checked ~ .navigation {
+    display: flex;
+  }
+
+  .navigation a {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+/* Responsive Layout for Contact Box */
+@media (max-width: 768px) {
+  .box {
+    padding: 0 20px;
+    margin-top: 80px;
+  }
+
+  .box h1 {
+    font-size: 28px;
+  }
+
+  .contact {
+    font-size: 18px;
+  }
+
+  .nm {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .box h1 {
+    font-size: 24px;
+  }
+
+  .contact {
+    font-size: 16px;
+  }
+
+  .nm {
+    font-size: 14px;
+  }
 }

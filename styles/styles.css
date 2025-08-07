@@ -1,7 +1,6 @@
 .image-link img {
   width: 100px;
   height: 100px;
-  margin-left: 40px;
 }
 
 .classname {
@@ -14,14 +13,15 @@
 .navigation {
   display: flex;
   gap: 35px;
-  margin-right: 80px;
+  margin-right: 60px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 a {
   text-decoration: none;
   font-size: 20px;
   color: black;
-  /* amas shevcvli */
 }
 
 /* გასტილვააა */
@@ -31,7 +31,7 @@ a {
   padding: 20px 50px 40px;
   margin-top: 70px;
   text-align: center;
-  color: white; /* so text is visible on brown background */
+  color: white;
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
@@ -71,4 +71,129 @@ a {
   font-size: 18px;
   letter-spacing: 0.8px;
   color: rgb(91, 91, 91);
+}
+
+/* ========== MAKE NAVIGATION RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .classname {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .image-link img {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .main-info {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .main-info .pirv {
+    font-size: 50px;
+  }
+
+  .main-info .meore {
+    font-size: 22px;
+  }
+
+  .main-info .mesame {
+    font-size: 16px;
+  }
+
+  .bolo {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-info .pirv {
+    font-size: 36px;
+  }
+
+  .main-info .meore {
+    font-size: 18px;
+  }
+
+  .main-info .mesame {
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .bolo {
+    position: static;
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+/* Hide burger menu by default (desktop view) */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Hide the checkbox */
+#burger-toggle {
+  display: none;
+}
+
+/* Mobile styles (under 770px) */
+@media (max-width: 770px) {
+  .classname {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .burger-menu {
+    display: block;
+    font-size: 30px;
+    /* align-self: flex-end; */
+    cursor: pointer;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    display: none;
+    text-align: center;
+    margin: 10px 0 0;
+    transition: all 0.3s ease;
+  }
+
+  /* When checkbox is checked, show the menu */
+  #burger-toggle:checked ~ .navigation {
+    display: flex;
+  }
+
+  .navigation a {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
